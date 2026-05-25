@@ -210,16 +210,16 @@ Latest local package benchmark on Node v26.1.0, darwin arm64, 9 rounds:
 
 | Fixture | Median | p95 |
 | --- | ---: | ---: |
-| React patch store replace, 1k rows one edit | 228.82 us | 241.33 us |
-| External store adapter notify 10 listeners | 0.08 us | 0.13 us |
+| React patch store replace, 1k rows one edit | 224.61 us | 231.38 us |
+| External store adapter notify 10 listeners | 0.08 us | 0.10 us |
 | State engine adapter snapshot read | 0.01 us | 0.01 us |
 
 Latest local full client/server React flow benchmark on Node v26.1.0, darwin arm64, 80 measured iterations after 12 warmup iterations:
 
 | Fixture | Total median | Total p95 | Local commit | Provider sync call | Remote render wait | Update bytes |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| E2E CRDT text insert to React render | 2.78 ms | 8.77 ms | 29.08 us | 139.50 us | 2.51 ms | 41 |
-| E2E CRDT JSON set to React render | 3.29 ms | 8.18 ms | 23.71 us | 190.79 us | 2.88 ms | 50 |
+| E2E CRDT text insert to React render | 2.15 ms | 5.54 ms | 21.25 us | 103.00 us | 1.90 ms | 41 |
+| E2E CRDT JSON set to React render | 1.86 ms | 5.82 ms | 15.50 us | 95.79 us | 1.53 ms | 50 |
 
 These are Frontier-only package measurements, not competitor comparisons.
 

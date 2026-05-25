@@ -1,8 +1,8 @@
 {
   "package": "@shapeshift-labs/frontier-react",
   "benchmark": "full-client-server-react-flow",
-  "version": "0.1.1",
-  "generatedAt": "2026-05-25T13:31:01.984Z",
+  "version": "0.1.3",
+  "generatedAt": "2026-05-25T13:44:27.068Z",
   "node": "v26.1.0",
   "platform": "darwin arm64",
   "iterations": 80,
@@ -11,22 +11,22 @@
     {
       "fixture": "E2E CRDT text insert to React render",
       "iterations": 80,
-      "totalMedianUs": 2779.17,
-      "totalP95Us": 8771.29,
-      "localCommitMedianUs": 29.08,
-      "syncCallMedianUs": 139.5,
-      "renderWaitMedianUs": 2510.58,
+      "totalMedianUs": 2154,
+      "totalP95Us": 5536.33,
+      "localCommitMedianUs": 21.25,
+      "syncCallMedianUs": 103,
+      "renderWaitMedianUs": 1897.63,
       "updateBytesMedian": 41,
       "patchOpsMedian": 1
     },
     {
       "fixture": "E2E CRDT JSON set to React render",
       "iterations": 80,
-      "totalMedianUs": 3285.62,
-      "totalP95Us": 8182.37,
-      "localCommitMedianUs": 23.71,
-      "syncCallMedianUs": 190.79,
-      "renderWaitMedianUs": 2882.62,
+      "totalMedianUs": 1859.87,
+      "totalP95Us": 5821,
+      "localCommitMedianUs": 15.5,
+      "syncCallMedianUs": 95.79,
+      "renderWaitMedianUs": 1531,
       "updateBytesMedian": 50,
       "patchOpsMedian": 1
     }
