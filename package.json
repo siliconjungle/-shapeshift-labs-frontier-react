@@ -1,6 +1,6 @@
 {
   "name": "@shapeshift-labs/frontier-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React external-store hooks and adapters for Frontier state, cache, and CRDT surfaces.",
   "type": "module",
   "license": "MIT",
@@ -58,7 +58,8 @@
     "dist",
     "README.md",
     "LICENSE",
-    "benchmarks/package-bench.mjs"
+    "benchmarks/package-bench.mjs",
+    "benchmarks/e2e-flow.mjs"
   ],
   "engines": {
     "node": ">=18"
@@ -70,11 +71,15 @@
     "react": ">=18.0.0"
   },
   "devDependencies": {
+    "@shapeshift-labs/frontier-crdt": "^0.1.2",
+    "@shapeshift-labs/frontier-crdt-sync": "^0.1.4",
+    "@shapeshift-labs/frontier-crdt-websocket": "^0.1.2",
     "@types/node": "^24.10.1",
     "@types/react": "^18.3.12",
     "react": "^18.3.1",
     "react-test-renderer": "^18.3.1",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "ws": "^8.21.0"
   },
   "scripts": {
     "build": "node build.mjs",
@@ -83,6 +88,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p test/tsconfig.json --noEmit",
     "fuzz": "npm run build && node test/fuzz.mjs",
     "bench": "npm run build && node benchmarks/package-bench.mjs",
+    "bench:e2e": "npm run build && node benchmarks/e2e-flow.mjs",
     "pack:dry": "npm pack --dry-run"
   },
   "keywords": [

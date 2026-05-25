@@ -191,6 +191,7 @@ The package ships ESM JavaScript plus `.d.ts` declarations for root, `./store`, 
 npm test
 npm run fuzz
 npm run bench
+npm run bench:e2e
 npm run pack:dry
 ```
 
@@ -198,19 +199,27 @@ The package test suite covers root and subpath imports, patch-store commits, pat
 
 ## Benchmarks
 
-Run the package-local benchmark:
+Run the package-local benchmarks:
 
 ```sh
 npm run bench
+npm run bench:e2e -- --out benchmarks/results/e2e-flow-latest.json
 ```
 
-Latest local package benchmark on Node v26.1.0, darwin arm64, 7 rounds:
+Latest local package benchmark on Node v26.1.0, darwin arm64, 9 rounds:
 
 | Fixture | Median | p95 |
 | --- | ---: | ---: |
-| React patch store replace, 1k rows one edit | 200.74 us | 214.39 us |
-| External store adapter notify 10 listeners | 0.07 us | 0.09 us |
+| React patch store replace, 1k rows one edit | 228.82 us | 241.33 us |
+| External store adapter notify 10 listeners | 0.08 us | 0.13 us |
 | State engine adapter snapshot read | 0.01 us | 0.01 us |
+
+Latest local full client/server React flow benchmark on Node v26.1.0, darwin arm64, 80 measured iterations after 12 warmup iterations:
+
+| Fixture | Total median | Total p95 | Local commit | Provider sync call | Remote render wait | Update bytes |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| E2E CRDT text insert to React render | 2.78 ms | 8.77 ms | 29.08 us | 139.50 us | 2.51 ms | 41 |
+| E2E CRDT JSON set to React render | 3.29 ms | 8.18 ms | 23.71 us | 190.79 us | 2.88 ms | 50 |
 
 These are Frontier-only package measurements, not competitor comparisons.
 

@@ -1,20 +1,20 @@
 {
   "package": "@shapeshift-labs/frontier-react",
-  "version": "0.1.0",
-  "generatedAt": "2026-05-25T12:59:30.723Z",
+  "version": "0.1.1",
+  "generatedAt": "2026-05-25T13:31:00.262Z",
   "node": "v26.1.0",
   "platform": "darwin arm64",
-  "rounds": 7,
+  "rounds": 9,
   "rows": [
     {
       "fixture": "React patch store replace, 1k rows one edit",
-      "medianUs": 200.74,
-      "p95Us": 214.39
+      "medianUs": 228.82,
+      "p95Us": 241.33
     },
     {
       "fixture": "External store adapter notify 10 listeners",
-      "medianUs": 0.07,
-      "p95Us": 0.09
+      "medianUs": 0.08,
+      "p95Us": 0.13
     },
     {
       "fixture": "State engine adapter snapshot read",
