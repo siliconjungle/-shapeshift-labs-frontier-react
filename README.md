@@ -102,6 +102,19 @@ function Title() {
 }
 ```
 
+## Rich Text And Editor Bindings
+
+`frontier-react` is the React subscription layer, not the rich-text engine. Rich text composes like this:
+
+| Layer | Role |
+| --- | --- |
+| `@shapeshift-labs/frontier-richtext` | Local Delta/range/cursor helpers used while an editor is shaping local input. |
+| `@shapeshift-labs/frontier-crdt` | Collaborative rich-text storage with stable CRDT text anchors, mark/embed/block sidecars, update merge, and Delta import/export. |
+| `@shapeshift-labs/frontier-react` | React `useSyncExternalStore` hooks and structural adapters that let components subscribe to Frontier state/cache/CRDT snapshots. |
+| Future editor bindings | CodeMirror, Monaco, ProseMirror, textarea, cursor/selection decorations, presence rendering, and editor-specific debounce/update policy. |
+
+Use `createFrontierCrdtStore()` to subscribe React components to a CRDT document or state engine. For editor controls, keep editor-specific DOM/decorations in the app or a dedicated editor binding package, use `frontier-richtext` for local Delta/cursor transforms, and commit durable collaborative changes through `frontier-crdt`.
+
 ## API
 
 ```ts
