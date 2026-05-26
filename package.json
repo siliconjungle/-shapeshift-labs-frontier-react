@@ -65,15 +65,15 @@
     "node": ">=18"
   },
   "dependencies": {
-    "@shapeshift-labs/frontier": "^0.1.5"
+    "@shapeshift-labs/frontier": "0.1.8"
   },
   "peerDependencies": {
     "react": ">=18.0.0"
   },
   "devDependencies": {
-    "@shapeshift-labs/frontier-crdt": "^0.1.2",
-    "@shapeshift-labs/frontier-crdt-sync": "^0.1.4",
-    "@shapeshift-labs/frontier-crdt-websocket": "^0.1.4",
+    "@shapeshift-labs/frontier-crdt": "0.1.4",
+    "@shapeshift-labs/frontier-crdt-sync": "0.1.4",
+    "@shapeshift-labs/frontier-crdt-websocket": "0.1.4",
     "@types/node": "^24.10.1",
     "@types/react": "^18.3.12",
     "react": "^18.3.1",
